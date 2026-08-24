@@ -10,7 +10,7 @@ export default function ContactPage() {
         <div>
           <label
             htmlFor="name"
-            className="label block"
+            className="micro block"
           >
             Name
           </label>
@@ -24,7 +24,7 @@ export default function ContactPage() {
         <div>
           <label
             htmlFor="email"
-            className="label block"
+            className="micro block"
           >
             Email
           </label>
@@ -38,7 +38,7 @@ export default function ContactPage() {
         <div>
           <label
             htmlFor="message"
-            className="label block"
+            className="micro block"
           >
             Message
           </label>

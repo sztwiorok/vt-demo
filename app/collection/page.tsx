@@ -1,33 +1,7 @@
 import SizeGuidePopup from "@/components/SizeGuidePopup";
 import SpecColumns from "@/components/SpecColumns";
 import ProductCard from "@/components/ProductCard";
-
-const products = [
-  {
-    name: "Merino Crew",
-    price: "€145",
-    detail: "Fine-gauge merino wool",
-    swatch: "from-stone-300 to-stone-400",
-  },
-  {
-    name: "Linen Overshirt",
-    price: "€180",
-    detail: "Washed European linen",
-    swatch: "from-amber-100 to-stone-300",
-  },
-  {
-    name: "Cotton Tee",
-    price: "€65",
-    detail: "Heavyweight organic cotton",
-    swatch: "from-stone-200 to-stone-300",
-  },
-  {
-    name: "Wide Trouser",
-    price: "€210",
-    detail: "Japanese cotton twill",
-    swatch: "from-stone-400 to-stone-600",
-  },
-];
+import { products } from "@/lib/products";
 
 export default function CollectionPage() {
   return (

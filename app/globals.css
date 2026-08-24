@@ -11,7 +11,11 @@ body {
 }
 
 @layer components {
-  .label {
+  .micro {
+    @apply text-xs uppercase tracking-[0.2em] text-stone-400;
+  }
+
+  .footer-note {
     @apply text-xs uppercase tracking-[0.2em] text-stone-500;
   }
 
