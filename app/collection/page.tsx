@@ -1,4 +1,5 @@
 import SizeGuidePopup from "@/components/SizeGuidePopup";
+import SpecColumns from "@/components/SpecColumns";
 
 const products = [
   {
@@ -69,31 +70,8 @@ export default function CollectionPage() {
         ))}
       </div>
 
-      <div className="mt-24 bg-stone-700 px-10 py-14">
-        <div className="grid gap-12 md:grid-cols-3">
-          <div>
-            <p className="label">Fabric</p>
-            <p className="mt-4 text-sm leading-relaxed text-stone-300">
-              Single-origin fibres only. The merino is spun in Biella, the linen
-              grown in Normandy and woven in Portugal. We publish the mill for
-              every garment.
-            </p>
-          </div>
-          <div>
-            <p className="label">Care</p>
-            <p className="mt-4 text-sm leading-relaxed text-stone-300">
-              Wash cold, dry flat, skip the iron on linen. Merino wants air more
-              than water — hang it overnight between wears.
-            </p>
-          </div>
-          <div>
-            <p className="label">Repairs</p>
-            <p className="mt-4 text-sm leading-relaxed text-stone-300">
-              Every garment carries a lifetime mending guarantee. Send it back
-              with a note and we will repair it and post it to you.
-            </p>
-          </div>
-        </div>
+      <div className="mt-24 bg-stone-700 px-10 py-14 text-stone-300">
+        <SpecColumns />
       </div>
 
       <div className="mt-24 border-t border-stone-300 pt-16">
