@@ -69,7 +69,7 @@ export default function CollectionPage() {
         ))}
       </div>
 
-      <div className="mt-24 bg-stone-900 px-10 py-14">
+      <div className="mt-24 bg-stone-700 px-10 py-14">
         <div className="grid gap-12 md:grid-cols-3">
           <div>
             <p className="label">Fabric</p>
