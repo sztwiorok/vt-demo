@@ -15,7 +15,7 @@ test.describe("navigation", () => {
     await page.goto("/");
     await page.getByTestId("hero-cta").click();
 
-    await expect(page).toHaveURL("/collection");
+    await expect(page).toHaveURL("/collection/");
     await expect(page.getByRole("heading", { name: "The Collection" })).toBeVisible();
   });
 
@@ -23,10 +23,10 @@ test.describe("navigation", () => {
     await page.goto("/");
 
     await page.getByRole("navigation", { name: "Main" }).getByRole("link", { name: "Collection" }).click();
-    await expect(page).toHaveURL("/collection");
+    await expect(page).toHaveURL("/collection/");
 
     await page.getByRole("navigation", { name: "Main" }).getByRole("link", { name: "Contact" }).click();
-    await expect(page).toHaveURL("/contact");
+    await expect(page).toHaveURL("/contact/");
     await expect(page.getByRole("heading", { name: "Contact" })).toBeVisible();
 
     await page.getByRole("navigation", { name: "Main" }).getByRole("link", { name: "Home" }).click();
