@@ -19,6 +19,18 @@ body {
     @apply text-sm text-stone-600 transition-colors hover:text-stone-900;
   }
 
+  .btn {
+    @apply bg-stone-900 px-6 py-3 text-center text-xs uppercase tracking-[0.2em] text-white transition-colors hover:bg-stone-700;
+  }
+
+  .link {
+    @apply text-xs uppercase tracking-[0.2em] text-stone-600 underline decoration-stone-300 underline-offset-4 transition-colors hover:text-stone-900;
+  }
+
+  .btn-outline {
+    @apply border border-stone-900 px-6 py-3 text-xs uppercase tracking-[0.2em] text-stone-900 transition-colors hover:bg-stone-900 hover:text-white;
+  }
+
   .hero-copy {
     @apply relative z-20 rounded-sm bg-white p-6 shadow-sm;
   }
@@ -29,18 +41,6 @@ body {
 
   .modal-window {
     @apply relative z-50 rounded-sm bg-white p-6 shadow-sm;
-  }
-
-  .btn-solid {
-    @apply bg-stone-900 px-6 py-3 text-xs uppercase tracking-[0.2em] text-white transition-colors hover:bg-stone-700;
-  }
-
-  .btn-outline {
-    @apply border border-stone-900 px-6 py-3 text-xs uppercase tracking-[0.2em] text-stone-900 transition-colors hover:bg-stone-900 hover:text-white;
-  }
-
-  .btn-block {
-    @apply mt-5 w-full border border-stone-900 py-2 text-xs uppercase tracking-[0.2em] transition-colors hover:bg-stone-900 hover:text-white;
   }
 
   .field-line {

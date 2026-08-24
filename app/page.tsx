@@ -30,7 +30,7 @@ export default function HomePage() {
               <Link
                 href="/collection"
                 data-testid="hero-cta"
-                className="btn-solid"
+                className="btn-outline"
               >
                 Shop the collection
               </Link>

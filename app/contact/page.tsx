@@ -52,7 +52,7 @@ export default function ContactPage() {
         <button
           type="submit"
           data-testid="contact-submit"
-          className="btn-solid"
+          className="btn"
         >
           Send message
         </button>

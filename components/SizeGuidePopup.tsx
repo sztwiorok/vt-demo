@@ -28,7 +28,7 @@ export default function SizeGuidePopup() {
         type="button"
         onClick={() => setOpen(true)}
         data-testid="size-guide-open"
-        className="text-xs uppercase tracking-[0.2em] text-stone-600 underline decoration-stone-300 underline-offset-4 transition-colors hover:text-stone-900"
+        className="link"
       >
         Size guide
       </button>

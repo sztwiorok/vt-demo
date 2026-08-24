@@ -20,7 +20,7 @@ export default function NewsletterPopup() {
         type="button"
         onClick={() => setOpen(true)}
         data-testid="newsletter-open"
-        className="btn-outline"
+        className="link"
       >
         Join the newsletter
       </button>

@@ -1,5 +1,6 @@
 import SizeGuidePopup from "@/components/SizeGuidePopup";
 import SpecColumns from "@/components/SpecColumns";
+import ProductCard from "@/components/ProductCard";
 
 const products = [
   {
@@ -46,27 +47,7 @@ export default function CollectionPage() {
         className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
       >
         {products.map((product) => (
-          <div
-            key={product.name}
-            className="product-card"
-            data-testid="product-card"
-          >
-            <div
-              aria-hidden="true"
-              className={`mb-5 aspect-[3/4] w-full bg-gradient-to-br ${product.swatch}`}
-            />
-            <h2 className="text-sm font-medium tracking-tight text-stone-900">
-              {product.name}
-            </h2>
-            <p className="mt-1 text-xs text-stone-500">{product.detail}</p>
-            <p className="mt-4 text-sm text-stone-900">{product.price}</p>
-            <button
-              type="button"
-              className="btn-block"
-            >
-              Add to bag
-            </button>
-          </div>
+          <ProductCard key={product.name} {...product} />
         ))}
       </div>
 
