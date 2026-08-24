@@ -1,5 +1,4 @@
 import Link from "next/link";
-import SharedPanel from "@/components/SharedPanel";
 import NewsletterPopup from "@/components/NewsletterPopup";
 
 export default function HomePage() {
@@ -16,7 +15,7 @@ export default function HomePage() {
         />
 
         <div className="mx-auto flex max-w-5xl items-center px-6 py-28">
-          <SharedPanel className="max-w-xl" testId="hero-panel">
+          <div className="hero-copy max-w-xl" data-testid="hero-panel">
             <p className="text-xs uppercase tracking-[0.3em] text-stone-500">
               Autumn / Winter
             </p>
@@ -31,13 +30,13 @@ export default function HomePage() {
               <Link
                 href="/collection"
                 data-testid="hero-cta"
-                className="bg-stone-900 px-6 py-3 text-xs uppercase tracking-[0.2em] text-white transition-colors hover:bg-stone-700"
+                className="btn-solid"
               >
                 Shop the collection
               </Link>
               <NewsletterPopup />
             </div>
-          </SharedPanel>
+          </div>
         </div>
       </section>
 

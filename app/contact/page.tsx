@@ -10,7 +10,7 @@ export default function ContactPage() {
         <div>
           <label
             htmlFor="name"
-            className="block text-xs uppercase tracking-[0.2em] text-stone-500"
+            className="field-label block"
           >
             Name
           </label>
@@ -18,13 +18,13 @@ export default function ContactPage() {
             id="name"
             name="name"
             type="text"
-            className="mt-2 w-full border-b border-stone-300 bg-transparent py-2 text-sm outline-none focus:border-stone-900"
+            className="field-line"
           />
         </div>
         <div>
           <label
             htmlFor="email"
-            className="block text-xs uppercase tracking-[0.2em] text-stone-500"
+            className="field-label block"
           >
             Email
           </label>
@@ -32,13 +32,13 @@ export default function ContactPage() {
             id="email"
             name="email"
             type="email"
-            className="mt-2 w-full border-b border-stone-300 bg-transparent py-2 text-sm outline-none focus:border-stone-900"
+            className="field-line"
           />
         </div>
         <div>
           <label
             htmlFor="message"
-            className="block text-xs uppercase tracking-[0.2em] text-stone-500"
+            className="field-label block"
           >
             Message
           </label>
@@ -46,13 +46,13 @@ export default function ContactPage() {
             id="message"
             name="message"
             rows={5}
-            className="mt-2 w-full border-b border-stone-300 bg-transparent py-2 text-sm outline-none focus:border-stone-900"
+            className="field-line"
           />
         </div>
         <button
           type="submit"
           data-testid="contact-submit"
-          className="bg-stone-900 px-6 py-3 text-xs uppercase tracking-[0.2em] text-white transition-colors hover:bg-stone-700"
+          className="btn-solid"
         >
           Send message
         </button>

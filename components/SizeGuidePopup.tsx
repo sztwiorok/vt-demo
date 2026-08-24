@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import SharedPanel from "@/components/SharedPanel";
 
 const rows = [
   { size: "XS", chest: "84", waist: "68", length: "64" },
@@ -48,7 +47,10 @@ export default function SizeGuidePopup() {
             className="pointer-events-none fixed inset-0 z-40 bg-stone-900/70"
           />
 
-          <SharedPanel className="w-full max-w-lg" testId="size-guide-window">
+          <div
+            className="modal-window w-full max-w-lg"
+            data-testid="size-guide-window"
+          >
             <div className="flex items-start justify-between gap-6">
               <h2 className="text-lg font-medium tracking-tight">Size guide</h2>
               <button
@@ -56,7 +58,7 @@ export default function SizeGuidePopup() {
                 onClick={() => setOpen(false)}
                 data-testid="size-guide-close"
                 aria-label="Close size guide"
-                className="text-xl leading-none text-stone-500 transition-colors hover:text-stone-900"
+                className="modal-close"
               >
                 &times;
               </button>
@@ -85,7 +87,7 @@ export default function SizeGuidePopup() {
                 ))}
               </tbody>
             </table>
-          </SharedPanel>
+          </div>
         </div>
       )}
     </>

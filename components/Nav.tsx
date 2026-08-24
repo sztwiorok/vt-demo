@@ -24,7 +24,7 @@ export default function Nav() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="text-sm text-stone-600 transition-colors hover:text-stone-900"
+                className="nav-link"
               >
                 {link.label}
               </Link>

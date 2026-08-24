@@ -11,7 +11,38 @@ body {
 }
 
 @layer components {
-  .shared-panel {
+  .field-label,
+  .footer-note {
+    @apply text-xs uppercase tracking-[0.2em] text-stone-500;
+  }
+
+  .nav-link {
+    @apply text-sm text-stone-600 transition-colors hover:text-stone-900;
+  }
+
+  .product-card,
+  .modal-window,
+  .hero-copy {
     @apply bg-white p-6 relative z-50 rounded-sm shadow-sm;
+  }
+
+  .btn-solid {
+    @apply bg-stone-900 px-6 py-3 text-xs uppercase tracking-[0.2em] text-white transition-colors hover:bg-stone-700;
+  }
+
+  .btn-outline {
+    @apply border border-stone-900 px-6 py-3 text-xs uppercase tracking-[0.2em] text-stone-900 transition-colors hover:bg-stone-900 hover:text-white;
+  }
+
+  .btn-block {
+    @apply mt-5 w-full border border-stone-900 py-2 text-xs uppercase tracking-[0.2em] transition-colors hover:bg-stone-900 hover:text-white;
+  }
+
+  .field-line {
+    @apply mt-2 w-full border-b border-stone-300 bg-transparent py-2 text-sm outline-none focus:border-stone-900;
+  }
+
+  .modal-close {
+    @apply text-xl leading-none text-stone-500 transition-colors hover:text-stone-900;
   }
 }

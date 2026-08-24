@@ -1,4 +1,3 @@
-import SharedPanel from "@/components/SharedPanel";
 import SizeGuidePopup from "@/components/SizeGuidePopup";
 
 const products = [
@@ -46,7 +45,11 @@ export default function CollectionPage() {
         className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
       >
         {products.map((product) => (
-          <SharedPanel key={product.name} testId="product-card">
+          <div
+            key={product.name}
+            className="product-card"
+            data-testid="product-card"
+          >
             <div
               aria-hidden="true"
               className={`mb-5 aspect-[3/4] w-full bg-gradient-to-br ${product.swatch}`}
@@ -58,11 +61,11 @@ export default function CollectionPage() {
             <p className="mt-4 text-sm text-stone-900">{product.price}</p>
             <button
               type="button"
-              className="mt-5 w-full border border-stone-900 py-2 text-xs uppercase tracking-[0.2em] transition-colors hover:bg-stone-900 hover:text-white"
+              className="btn-block"
             >
               Add to bag
             </button>
-          </SharedPanel>
+          </div>
         ))}
       </div>
     </section>

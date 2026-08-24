@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import SharedPanel from "@/components/SharedPanel";
 
 export default function NewsletterPopup() {
   const [open, setOpen] = useState(false);
@@ -21,7 +20,7 @@ export default function NewsletterPopup() {
         type="button"
         onClick={() => setOpen(true)}
         data-testid="newsletter-open"
-        className="border border-stone-900 px-6 py-3 text-xs uppercase tracking-[0.2em] text-stone-900 transition-colors hover:bg-stone-900 hover:text-white"
+        className="btn-outline"
       >
         Join the newsletter
       </button>
@@ -40,7 +39,10 @@ export default function NewsletterPopup() {
             className="pointer-events-none fixed inset-0 z-40 bg-stone-900/70"
           />
 
-          <SharedPanel className="w-full max-w-md" testId="newsletter-window">
+          <div
+            className="modal-window w-full max-w-md"
+            data-testid="newsletter-window"
+          >
             <div className="flex items-start justify-between gap-6">
               <h2 className="text-lg font-medium tracking-tight">
                 Ten percent off your first order
@@ -50,7 +52,7 @@ export default function NewsletterPopup() {
                 onClick={() => setOpen(false)}
                 data-testid="newsletter-close"
                 aria-label="Close newsletter popup"
-                className="text-xl leading-none text-stone-500 transition-colors hover:text-stone-900"
+                className="modal-close"
               >
                 &times;
               </button>
@@ -79,7 +81,7 @@ export default function NewsletterPopup() {
                 Sign up
               </button>
             </form>
-          </SharedPanel>
+          </div>
         </div>
       )}
     </>
