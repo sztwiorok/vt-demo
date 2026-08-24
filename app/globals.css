@@ -7,12 +7,12 @@
 }
 
 body {
-  @apply bg-stone-200 text-stone-900 antialiased;
+  @apply bg-stone-300 text-stone-900 antialiased;
 }
 
 @layer components {
   .label {
-    @apply text-xs uppercase tracking-[0.2em] text-stone-400;
+    @apply text-xs uppercase tracking-[0.2em] text-stone-500;
   }
 
   .nav-link {
@@ -32,15 +32,15 @@ body {
   }
 
   .hero-copy {
-    @apply relative z-20 rounded-sm bg-white p-6 shadow-sm;
+    @apply relative z-20 rounded-sm bg-surface p-6 shadow-sm;
   }
 
   .product-card {
-    @apply rounded-sm bg-white p-6 shadow-sm;
+    @apply rounded-sm bg-surface p-6 shadow-sm;
   }
 
   .modal-window {
-    @apply relative z-50 rounded-sm bg-white p-6 shadow-sm;
+    @apply relative z-50 rounded-sm bg-surface p-6 shadow-sm;
   }
 
   .field-line {

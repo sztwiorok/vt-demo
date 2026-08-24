@@ -18,7 +18,7 @@ export default function SpecColumns() {
     <div className="grid gap-12 md:grid-cols-3">
       {items.map((item) => (
         <div key={item.title}>
-          <p className="label">{item.title}</p>
+          <p className="text-xs uppercase tracking-[0.2em]">{item.title}</p>
           <p className="mt-4 text-sm leading-relaxed">{item.body}</p>
         </div>
       ))}
