@@ -20,10 +20,16 @@ body {
     @apply text-sm text-stone-600 transition-colors hover:text-stone-900;
   }
 
-  .product-card,
-  .modal-window,
   .hero-copy {
-    @apply bg-white p-6 relative z-50 rounded-sm shadow-sm;
+    @apply relative z-20 rounded-sm bg-white p-6 shadow-sm;
+  }
+
+  .product-card {
+    @apply rounded-sm bg-white p-6 shadow-sm;
+  }
+
+  .modal-window {
+    @apply relative z-50 rounded-sm bg-white p-6 shadow-sm;
   }
 
   .btn-solid {
