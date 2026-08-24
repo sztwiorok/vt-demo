@@ -10,7 +10,7 @@ export default function ContactPage() {
         <div>
           <label
             htmlFor="name"
-            className="field-label block"
+            className="label block"
           >
             Name
           </label>
@@ -24,7 +24,7 @@ export default function ContactPage() {
         <div>
           <label
             htmlFor="email"
-            className="field-label block"
+            className="label block"
           >
             Email
           </label>
@@ -38,7 +38,7 @@ export default function ContactPage() {
         <div>
           <label
             htmlFor="message"
-            className="field-label block"
+            className="label block"
           >
             Message
           </label>

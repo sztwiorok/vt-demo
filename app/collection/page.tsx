@@ -69,33 +69,30 @@ export default function CollectionPage() {
         ))}
       </div>
 
-      <div className="mt-24 grid gap-16 md:grid-cols-2">
-        <div>
-          <h2 className="text-lg font-light tracking-tight">Materials</h2>
-          <p className="mt-4 text-sm leading-relaxed text-stone-600">
-            Every piece is cut from a single-origin fibre. The merino comes from
-            a mill in Biella that has spun the same yarn since 1936; the linen is
-            grown in Normandy and woven in Portugal. We publish the mill for each
-            garment on its product page because a fabric is only as good as the
-            people who made it.
-          </p>
-          <p className="mt-4 text-sm leading-relaxed text-stone-600">
-            Nothing is blended to bring a price down. If a garment cannot be made
-            well at a price we can defend, we do not make it.
-          </p>
-        </div>
-        <div>
-          <h2 className="text-lg font-light tracking-tight">Care</h2>
-          <p className="mt-4 text-sm leading-relaxed text-stone-600">
-            Wash cold, dry flat, and skip the iron on linen — the creases are the
-            point. Merino wants air more than water: hang it overnight between
-            wears and wash it once a season.
-          </p>
-          <p className="mt-4 text-sm leading-relaxed text-stone-600">
-            Every garment carries a lifetime mending guarantee. Send it back with
-            a note and we will repair the seam, replace the button, or reweave the
-            hole and post it to you.
-          </p>
+      <div className="mt-24 bg-stone-900 px-10 py-14">
+        <div className="grid gap-12 md:grid-cols-3">
+          <div>
+            <p className="label">Fabric</p>
+            <p className="mt-4 text-sm leading-relaxed text-stone-300">
+              Single-origin fibres only. The merino is spun in Biella, the linen
+              grown in Normandy and woven in Portugal. We publish the mill for
+              every garment.
+            </p>
+          </div>
+          <div>
+            <p className="label">Care</p>
+            <p className="mt-4 text-sm leading-relaxed text-stone-300">
+              Wash cold, dry flat, skip the iron on linen. Merino wants air more
+              than water — hang it overnight between wears.
+            </p>
+          </div>
+          <div>
+            <p className="label">Repairs</p>
+            <p className="mt-4 text-sm leading-relaxed text-stone-300">
+              Every garment carries a lifetime mending guarantee. Send it back
+              with a note and we will repair it and post it to you.
+            </p>
+          </div>
         </div>
       </div>
 

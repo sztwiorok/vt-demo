@@ -11,9 +11,8 @@ body {
 }
 
 @layer components {
-  .field-label,
-  .footer-note {
-    @apply text-xs uppercase tracking-[0.2em] text-stone-500;
+  .label {
+    @apply text-xs uppercase tracking-[0.2em] text-stone-400;
   }
 
   .nav-link {
