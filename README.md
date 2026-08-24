@@ -1,51 +1,15 @@
-# Lumina Apparel — Visual Regression Testing Demo
+# Lumina Apparel
 
-A three-page static Next.js site (App Router + Tailwind) built to demonstrate a
-class of bug that **functional E2E tests cannot catch**: a CSS-only regression
-that leaves the DOM, the accessibility tree and every click target intact.
+Marketing site for a minimalist clothing brand. Static Next.js (App Router) +
+Tailwind CSS.
 
 ## Pages
 
-| Route         | Contents                                                |
-| ------------- | ------------------------------------------------------- |
-| `/`           | Hero with copy panel + CTA, editorial grid, newsletter popup |
-| `/collection` | 4-item product grid, size-guide popup                    |
-| `/contact`    | Contact form + studio details                            |
-
-Popups are click-triggered (`Join the newsletter`, `Size guide`) and close via
-their `×` button or the Escape key.
-
-## The shared dependency
-
-`components/SharedPanel.tsx` renders a single global class, `.shared-panel`,
-declared once in `app/globals.css`:
-
-```css
-.shared-panel {
-  @apply bg-white p-6 relative z-50 rounded-sm shadow-sm;
-}
-```
-
-That one declaration is the visual foundation of **three unrelated features**:
-
-1. the Hero copy block — `app/page.tsx`
-2. every product card — `app/collection/page.tsx`
-3. the window of both popups — `components/NewsletterPopup.tsx`,
-   `components/SizeGuidePopup.tsx`
-
-`bg-white` is what makes the popup readable over its dark scrim, `z-50` is what
-lifts the popup above that scrim, and `p-6` is what keeps every product card
-from collapsing onto its own text. Nothing in the Hero's source file says so.
-
-## Why the E2E suite is blind to it
-
-`e2e/` asserts behaviour: routes resolve, headings render, popups open, close
-buttons close them, the form accepts input, the grid holds four cards. Change
-`.shared-panel` to `bg-transparent p-0 z-0` and every one of those assertions
-still passes — the elements are present, visible per the DOM, and hit-testable.
-The popup scrim is deliberately `pointer-events-none`, so it never intercepts a
-click even when it paints over the panel. Only a **pixel** comparison of `/`,
-`/collection`, and both open popups reveals the damage.
+| Route         | Contents                                                     |
+| ------------- | ------------------------------------------------------------ |
+| `/`           | Hero, editorial grid, newsletter popup                       |
+| `/collection` | Product grid (4 items), size-guide popup                     |
+| `/contact`    | Contact form + studio details                                |
 
 ## Build output
 
@@ -63,11 +27,10 @@ out/
   _next/static/...        CSS + JS chunks
 ```
 
-Point any file server at `out/` and it works with no rewrite rules — `/` and
-`/collection/` resolve to their `index.html` directly. `trailingSlash: true` is
-what produces `collection/index.html` instead of a bare `collection.html`,
-which a dumb file server could not resolve from `/collection` without
-clean-URL support.
+Point any file server at `out/` and it works with no rewrite rules.
+`trailingSlash: true` is what produces `collection/index.html` instead of a bare
+`collection.html`, which a plain file server could not resolve from
+`/collection` without clean-URL support.
 
 Note that `.next/server/app/*.html` is **not** the deliverable — those are
 internal build artifacts with no assets alongside them. Ship `out/`.
@@ -92,6 +55,15 @@ npm run test:e2e       # same thing
 npx serve out
 python3 -m http.server -d out 3000
 caddy file-server --root out --listen :3000
+```
+
+## Tests
+
+`e2e/` holds the Playwright suite: routing, the product grid, the contact form,
+and both popups (open, interact, close via button and via Escape).
+
+```bash
+npm run tests
 ```
 
 ## CI
@@ -131,12 +103,3 @@ Two ways to provision the browser:
   version, otherwise the revision in the image will not be the one requested.
 
 A ready-to-use GitHub Actions job lives in `.github/workflows/e2e.yml`.
-
-## Suggested visual-test coverage
-
-Baseline these four states, then re-shoot them after any styling change:
-
-- `/` — full page (Hero panel)
-- `/collection` — full page (product grid)
-- `/` with the newsletter popup open
-- `/collection` with the size-guide popup open

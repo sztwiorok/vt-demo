@@ -8,12 +8,11 @@ export default function HomePage() {
       {/* Hero */}
       <section
         data-testid="hero"
-        className="relative isolate overflow-hidden bg-gradient-to-br from-stone-700 via-stone-500 to-stone-800"
+        className="relative isolate overflow-hidden bg-gradient-to-br from-stone-200 via-stone-300 to-stone-400"
       >
-        {/* Stand-in for the hero photography */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 z-10 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.28),transparent_55%)]"
+          className="pointer-events-none absolute inset-0 z-10 bg-[radial-gradient(circle_at_25%_15%,rgba(255,255,255,0.75),transparent_60%)]"
         />
 
         <div className="mx-auto flex max-w-5xl items-center px-6 py-28">

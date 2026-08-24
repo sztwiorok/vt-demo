@@ -34,7 +34,7 @@ export default function NewsletterPopup() {
           data-testid="newsletter-popup"
           className="fixed inset-0 flex items-center justify-center p-4"
         >
-          {/* Decorative scrim. Purely visual — never swallows clicks. */}
+          {/* Decorative scrim. */}
           <div
             aria-hidden="true"
             className="pointer-events-none fixed inset-0 z-40 bg-stone-900/70"
