@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  @apply bg-stone-100 text-stone-900 antialiased;
+}
+
+/*
+ * Shared surface used across the site.
+ * Rendered by <SharedPanel />. See components/SharedPanel.tsx
+ */
+@layer components {
+  .shared-panel {
+    @apply bg-white p-6 relative z-50 rounded-sm shadow-sm;
+  }
+}
