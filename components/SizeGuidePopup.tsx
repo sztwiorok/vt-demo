@@ -39,7 +39,7 @@ export default function SizeGuidePopup() {
           aria-modal="true"
           aria-label="Size guide"
           data-testid="size-guide-popup"
-          className="fixed inset-0 flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4"
         >
           <div
             aria-hidden="true"

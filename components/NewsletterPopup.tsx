@@ -31,7 +31,7 @@ export default function NewsletterPopup() {
           aria-modal="true"
           aria-label="Newsletter signup"
           data-testid="newsletter-popup"
-          className="fixed inset-0 flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4"
         >
           <div
             aria-hidden="true"
