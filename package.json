@@ -24,6 +24,7 @@
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
     "autoprefixer": "10.4.19",
+    "bdy": "^1.23.13",
     "postcss": "8.4.40",
     "serve": "^14.2.6",
     "tailwindcss": "3.4.7",
